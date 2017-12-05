@@ -1,0 +1,24 @@
+<div class="jumbotron">
+	<h4>{{app}}</h4>
+
+	<hr/>
+    
+    
+	<h6>Quantidade de variáveis:</h6>
+	<input class="form-control" type="number" ng-model="tabela.variaveis" placeholder="Variáveis"/>
+
+	<h6>Quantidade de restrições:</h6>
+	<input class="form-control" type="number" ng-model="tabela.restricoes" placeholder="Restrições"/>
+
+	<h6>Quantidade de iterações:</h6>
+	<input class="form-control" type="number" ng-model="tabela.iteracoes" placeholder="Iterções"/>
+
+	<h6>Escolha um tipo:</h6>
+	<select class="form-control" ng-model="tabela.objetivo" ng-options="objetivo.nome for objetivo in objetivos">
+		<option value="">Selecionar</option>
+	</select>
+
+
+	<button class="btn btn-primary btn-block" ui-sref="criarTabela({params1: tabela})" ng-disabled="!tabela.variaveis || !tabela.restricoes || !tabela.iteracoes || !tabela.objetivo">OK</button>
+
+</div>

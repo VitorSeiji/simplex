@@ -1,0 +1,136 @@
+
+<!-- <h3>teste</h3> -->
+
+
+
+<div align="middle" ng-repeat = "pas in passoPasso track by $index" >
+  	<table border="1" margin="2">
+  		<thead>
+        Iteracao{{$index + 1}}
+	        <td>
+	          	Base
+	        </td>
+
+  	  		<td ng-repeat="con in coluna track by $index" align="center">
+  	  			X{{$index + 1}}  
+  	  		</td>
+
+	        <td>
+	         	B
+	        </td>
+        
+  		</thead>
+  		<tbody>	
+
+	  		<tr ng-repeat="ite in pas">
+	  		 	<td ng-repeat="i in ite track by $index"> 
+	  		 		{{i}}
+	  		 	</td>
+	  		</tr>
+
+
+
+ 			<!-- <td ng-repeat="si in sinalVar track by $index">
+              {{si.nome}}
+            </td>  -->
+      </tbody> 
+
+    </table>
+  </div>
+
+<!-- <div align="middle">
+  <hr>
+        <button ng-click="addNewIteracao()">Proximo</button>
+</div> -->
+
+<div align="middle">
+	<table border="1" margin="2">
+      	<thead>
+
+          <!-- <button ng-click="addNewIteracao()">Proximo</button>
+          <hr> -->
+      		Resultado
+      		<td ng-repeat="con in coluna track by $index" align="center">
+  	  			X{{$index + 1}}  
+  	  		</td>
+
+	        <td>
+	         	Z
+	        </td>
+      	</thead>
+      	<tbody>
+      		<td ng-repeat="res in resultado track by $index">
+      			{{res}}
+      		</td>	
+      	</tbody>
+      </table>
+
+      <h3>
+      	{{impossivel}}
+      </h3>
+</div>
+
+
+<div align="middle">
+  <table border="1" margin="2">
+        <thead>
+          Sensibilidade
+          <td>
+            Recursos 
+          </td>
+
+          <td>
+            Preco sombra
+          </td>
+
+          <td>
+            Limiti minimo
+          </td>
+
+          <td>
+            Limiti maximo
+          </td>
+
+          <td>
+            Valor inicial(B)
+          </td>
+        </thead>
+        <tbody>
+
+          <tr ng-repeat="ses in sensibilidade">
+            <td ng-repeat="s in ses track by $index"> 
+              {{s}}
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+</div>
+
+<!-- <div align="middle" ng-repeat="ite in iteracao">
+    <table border="1" margin="2" >
+      <thead>
+        Iteracao
+          <td>
+              Base
+          </td>
+
+          <td ng-repeat="con in coluna track by $index">
+            X{{$index + 1}}  
+          </td>
+
+          <td>
+            B
+          </td>
+        
+      </thead>
+      <tbody> 
+
+       <tr ng-repeat="ite in itera">
+          <td ng-repeat="i in ite track by $index"> 
+            {{i}}
+          </td>
+        </tr>
+           </tbody>
+      </table>
+</div> -->

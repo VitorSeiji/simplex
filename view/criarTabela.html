@@ -1,0 +1,88 @@
+<!-- 
+<div>
+    <table border="0">
+      <tr>
+        <td>linha:</td>
+        <td ng-repeat="linha in linhas">
+         	<input class="form-control" type="number" ng-model="linha.x" name="" placeholder="linha">
+
+	      	<button class="remove btn btn-primary btn-block" ng-show="$last" ng-click="removeLinha()">Remover linha</button>
+        </td>
+        <td><button class="addfields btn btn-primary btn-block" ng-click="addNewLinha()">Adicionar linha</button></td>
+      </tr>
+      <tr ng-repeat="coluna in colunhas">
+        <td>
+        	<input class="form-control" type="number" ng-model="coluna.x" name="" placeholder="coluna">
+	   		
+	      	
+        </td>
+        <td>
+        	<button class="remove btn btn-primary btn-block" ng-show="$last" ng-click="removeColuna()">Remover coluna</button>
+      </tr>
+      <tr>
+        <td>
+          <button class="addfields btn btn-primary btn-block" ng-click="addNewColuna()">Adicionar coluna</button>
+        </td>
+        <tr>
+    </table>
+  </div> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+
+  <div align="middle">
+
+  	<table>
+  		<thead>
+  			Iserir as variaveis da função e restrição:
+  		</thead>
+  		<tbody>
+        <td>
+          Função:
+        </td>
+  			<td ng-repeat="qdt in variaveis">
+				  <!-- <input type="number" placeholder="{{$index}}" ng-model="funcao[$index]"> -->
+				  <input type="number" ng-model="funcao[$index]">
+  				X{{$index + 1}}
+  			</td>
+  			<tr ng-repeat="tab in tabela track by $index">
+
+          <td>
+            Restrição:
+          </td>
+
+  				<td ng-repeat="t in tab track by $index">
+  					<!-- <input type="number" placeholder="{{$parent.$index}}-{{$index}}" ng-model="matrix[$parent.$index][$index]"> -->
+  					<input type="number" ng-model="matrix[$parent.$index][$index]">
+  					X{{$index + 1}}
+  				</td>
+
+  				<td>
+  					<!-- <select ng-model="sinal[$index]" ng-options="igualdade.nome for igualdade in igualdades">
+					   <option value="">Selecionar</option>
+					  </select> -->
+            <th>
+              <=
+            </th>
+          </td> 
+
+          <td>
+            <!-- <input type="number" placeholder="{{$index}}" ng-model="base[$index]"> -->
+            <input type="number" ng-model="base[$index]">
+          </td>	
+  			</tr>
+
+  		</tbody>
+  	</table>
+
+    <label ng-repeat="var in variaveis track by $index">
+      X{{$index + 1}}
+    </label>
+    >= 0
+    <hr>
+  	<button ui-sref="iteracao({params2: funcao, params3: matrix, params4: base, params5: sinal, params6: valores})">oK</button>
+  	
+  </div>
+
+      
+
+
