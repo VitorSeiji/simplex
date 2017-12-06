@@ -86,7 +86,7 @@ Front-End     	| HTML, AngularJs
 Back-End    	| Javascript, AngularJs
 Framework WEB   | AngularJs
 Editor de Texto | Sublime Text 3
-Servidores Web  | https://github.io/ e https://simplex-e2055.firebaseapp.com/#!/definicoes
+Servidores Web  | github.com/VitorSeiji/simplex e https://simplex-e2055.firebaseapp.com/#!/definicoes
 
 
 
